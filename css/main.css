@@ -131,6 +131,7 @@ a.menu_btn {
   background-position: center center ;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  position: relative;
   width: 100%;
   height: 890px;
   padding-top: 150px;
@@ -140,24 +141,27 @@ a.menu_btn {
   clip-path: polygon(0 0, 100% 0, 100% 71%, 0 82%);
 }
 
-#header_img_section h2 {
-  padding-left: 5px;
-  background-color: #fff;
-  color: #0e0202;
-  font-family: 'PT Sans Narrow', sans-serif;
-  font-size: 5em;
-  font-weight: 400;
-  width: 710px;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: uppercase;
+.header_circle {
+  background: rgba(184, 233, 148, 0.8);
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 100px;
 }
 
-h2#second_title {
-  text-align: left;
-  padding-left: 3px;
-  width: 405px;
+.header_circle h2 {
+  color: #fff;
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 5;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 80px;
 }
+
+
 
 /* END HEADER SECTION  */
 
@@ -274,7 +278,6 @@ h2#second_title {
 
 #product_section {
   padding: 60px 0;
-  margin-bottom: 500px;
 }
 
 #product_section img {
@@ -352,4 +355,41 @@ a.product_description_btn {
   margin-top: 30px;
 }
 
+#product_img {
+  background-image: url("../img/footer_section/src/2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 700px;
+}
+
 /* END PRODUCT SECCTION */
+
+
+/* CONTACTS SECTION */
+
+#contacts_section {
+  padding-bottom: 60px;
+  margin-bottom: 200px;
+}
+
+#footer_img {
+  background-image: url("../img/footer_section/src/3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 700px;
+}
+
+/* END CONTACTS SECTION */
+
+
+/**/
+
+#footer_section {
+  height: 500px;
+}
