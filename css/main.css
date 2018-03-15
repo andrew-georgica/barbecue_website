@@ -22,6 +22,12 @@ nav {
   padding-top: 90px;
 }
 
+header {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 h2 {
   color: #bfb1aa;
   font-family: 'Oswald', sans-serif;
@@ -163,10 +169,7 @@ h2#second_title {
 }
 
 #about_us_section header {
-  position: relative;
   top: -100px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .rel_row {
@@ -224,3 +227,129 @@ h2#second_title {
 }
 
 /* END ABOUT US SECTION */
+
+
+/* WORK SCHEME */
+
+#work_scheme {
+  padding: 60px 0;
+  padding-bottom: 80px;
+}
+
+#work_scheme header {
+  margin-bottom: 70px;
+}
+
+.scheme_block {
+  background-image: url(../img/scheme_section/src/1.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.scheme_block:last-child {
+  background-image: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.scheme_block h3 {
+  font-size: 2.5em;
+}
+
+/* END WORK SCHEME*/
+
+#scheme_img {
+  background-image: url("../img/product_secction/src/2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 380px;
+}
+
+/* PRODUCT SECCTION */
+
+#product_section {
+  padding: 60px 0;
+  margin-bottom: 500px;
+}
+
+#product_section img {
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/*#product_section .col-lg-6 {
+  border: 1px solid #000;
+}
+*/
+
+.product_block {
+  margin-bottom: 80px;
+}
+
+.product_description {
+  border: 4px solid #d1c4cc;
+  max-width: 700px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  padding: 0;
+}
+
+.product_description h2 {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  padding-top: 0;
+  top: 50px;
+  left: -45px;
+  margin: 0;
+}
+
+.product_description p {
+  width: 550px;
+  margin-top: 160px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+
+.product_data {
+  width: 550px;
+  margin-left: 50px;
+  clear: both;
+}
+
+.data_font {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+}
+
+.left_data {
+  float: left;
+}
+
+.right_data {
+  float: right;
+}
+
+a.product_description_btn {
+  background-color: #d1c4cc;
+  color: #fff;
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2em;
+  text-decoration: none;
+  max-width: 700px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px;
+  padding-top: 2px;
+  margin-top: 30px;
+}
+
+/* END PRODUCT SECCTION */
