@@ -20,6 +20,7 @@ nav {
   background-color: #fff;
   margin: 0 120px;
   padding-top: 90px;
+  margin-bottom: 100px;
 }
 
 header {
@@ -47,7 +48,7 @@ h3 {
 }
 
 p {
-  color: #333;
+  color: #0e0202;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
 }
@@ -141,27 +142,55 @@ a.menu_btn {
   clip-path: polygon(0 0, 100% 0, 100% 71%, 0 82%);
 }
 
-.header_circle {
-  background: rgba(184, 233, 148, 0.8);
+.circle {
+  background-color: #fff;
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 450px;
+  height: 450px;
   position: absolute;
   top: 100px;
+  -webkit-box-shadow: 0px 0px 72px 4px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 72px 4px rgba(0,0,0,0.3);
 }
 
-.header_circle h2 {
-  color: #fff;
-  text-transform: uppercase;
-
+.circle_text {
   position: relative;
   z-index: 5;
   width: 400px;
   margin: 0 auto;
   margin-top: 80px;
+  text-align: center;
+  padding-top: 0;
 }
 
+.circle h2 {
+  color: #0e0202;
+  margin-top: 85px;
+  font-size: 3.3em;
+}
 
+.circle p {
+  font-size: 1.5em;
+}
+
+a.circle_btn {
+  background-color: #bfb1aa;
+  color: #fff;
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.8em;
+  width: 200px;
+  padding: 5px;
+  padding-top: 0;
+  margin: 0 auto;
+  margin-top: 30px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a.circle_btn:hover {
+  border-radius: 30px;
+}
 
 /* END HEADER SECTION  */
 
@@ -201,10 +230,10 @@ a.menu_btn {
 }
 
 #img_section {
-  background-image: url(../img/about_us_section/src/2.jpg);
+  background-image: url(../img/about_us_section/src/1.jpg);
   background-position: center center ;
   background-repeat: no-repeat;
-
+  background-attachment: fixed;
   height: 700px;
   padding: 0;
   margin: 0;
@@ -220,7 +249,7 @@ a.menu_btn {
 
 #img_section .line{
   width: 80px;
-  top: 72px;
+  top: 85px;
   border-color: #d1c4cc;
 }
 
@@ -271,7 +300,14 @@ a.menu_btn {
   background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  height: 380px;
+  height: 700px;
+  position: relative;
+}
+
+#scheme_img .line {
+  width: 80px;
+  top: 85px;
+  border-color: #d1c4cc;
 }
 
 /* PRODUCT SECCTION */
@@ -328,8 +364,14 @@ a.menu_btn {
 }
 
 .data_font {
+  color: #0e0202;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
+}
+
+.price_date {
+  color: #e74c3c;
+  margin-top: 20px;
 }
 
 .left_data {
@@ -353,6 +395,11 @@ a.product_description_btn {
   padding: 5px;
   padding-top: 2px;
   margin-top: 30px;
+  transition: .3s;
+}
+
+a.product_description_btn:hover {
+  border-radius: 30px;
 }
 
 #product_img {
@@ -363,6 +410,16 @@ a.product_description_btn {
   -webkit-background-size: cover;
   background-size: cover;
   height: 700px;
+  position: relative;
+}
+
+#product_img .circle {
+  top: 125px;
+  right: 100px;
+}
+
+#product_img .circle h2 {
+  margin-top: 115px;
 }
 
 /* END PRODUCT SECCTION */
@@ -371,11 +428,43 @@ a.product_description_btn {
 /* CONTACTS SECTION */
 
 #contacts_section {
-  padding-bottom: 60px;
-  margin-bottom: 200px;
+  padding-bottom: 40px;
 }
 
-#footer_img {
+.contacts_section_text p:nth-child(2){
+  margin-bottom: 0;
+}
+
+#contacts_section header {
+  max-width: 100%;
+}
+
+#contacts_section header p{
+  text-align: center;
+}
+
+.icons_article {
+  text-align: center;
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.icons_article a {
+  background-color: #bfb1aa;
+  border-radius: 50%;
+  display: inline-block;
+  color: #fff;
+  font-size: 2.2em;
+  text-decoration: none;
+  padding-top: 17px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 75px;
+  height: 75px;
+}
+
+#contacts_img {
   background-image: url("../img/footer_section/src/3.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -383,13 +472,43 @@ a.product_description_btn {
   -webkit-background-size: cover;
   background-size: cover;
   height: 700px;
+  position: relative;
+}
+
+#contacts_img .img_section_content {
+  right: 200px;
+}
+
+#contacts_img #right_line {
+  width: 80px;
+  top: 80px;
+  border-color: #d1c4cc;
 }
 
 /* END CONTACTS SECTION */
 
 
-/**/
+/* FOOTER SECTION */
 
 #footer_section {
-  height: 500px;
+  padding: 0 120px;
+  text-align: right;
+
 }
+
+#footer_section p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.footer_link {
+  margin-bottom: 100px;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* END FOOTER SECTION */
