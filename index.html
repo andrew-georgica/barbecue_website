@@ -21,12 +21,25 @@
 
     <!-- Fonts -->
     <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
 
     <!-- Media -->
     <link href="css/media.css" rel="stylesheet">
+
+    <style>
+
+      #map {
+        height: 100%;
+		    padding-bottom: 450px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+    </style>
 
   </head>
   <body>
@@ -36,22 +49,22 @@
         <div class="col-lg-4">
           <ul>
             <li>
-              <a href="#">
+              <a href="#about_us_section" id="link_1">
                 Про нас
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#work_scheme" id="link_2">
+                Схема роботи
+              </a>
+            </li>
+            <li>
+              <a href="#product_section" id="link_3">
                 Меню
               </a>
             </li>
             <li>
-              <a href="#">
-                Замовлення
-              </a>
-            </li>
-            <li>
-              <a href="#">
+              <a href="#contacts_section" id="link_4">
                 Контакти
               </a>
             </li>
@@ -83,9 +96,8 @@
                 Без черг! Без переплати. просто соковите, свіженьке м'яско у
                 фірмовому маринаді.
               </p>
-              <a href="" class="circle_btn">
-                Хочу вже!
-              </a>
+              <a href="#" class="anim_btn effektD">Хочу вже!</a>
+
             </div>
           </div>
 
@@ -337,9 +349,7 @@
                 </div>
               </div>
             </article>
-            <a href="" class="product_description_btn">
-              Замовити
-            </a>
+            <a href="#" class="anim_btn effektD">Замовити</a>
           </div>
 
           <div class="col-lg-6 product_block">
@@ -393,9 +403,7 @@
                 </div>
               </div>
             </article>
-            <a href="" class="product_description_btn">
-              Замовити
-            </a>
+            <a href="#" class="anim_btn effektD">Замовити</a>
           </div>
           <div class="col-lg-6 product_block">
             <img src="img/product_secction/src/4.jpg" class="img-responsive" alt="">
@@ -442,6 +450,12 @@
           </p>
         </article>
 
+        <!-- MAP  -->
+
+        <div id="map"></div>
+
+        <!-- MAP  -->
+
         <header>
           <h2>
             Підписуйтесь!
@@ -475,6 +489,10 @@
             Заходьте час на дійно важливі речі. <br> Та на шашлики.
           </p>
         </article>
+
+        <a href="#header_section" class="arrow_top">
+          <i class="material-icons">keyboard_arrow_up</i>
+        </a>
 
         <span id="right_line" class="line"></span>
       </section>
@@ -538,7 +556,61 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- Scroll -->
+    <script src="js/scroll.js"></script>
 
+    <!-- Map -->
+
+    <script>
+
+        function initMap() {
+          var locations = [
+            ['м. Чернівці проспект Незалежності, ', 48.269295, 25.928019]
+          ];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: new google.maps.LatLng(48.269599, 25.928136),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: 'img/main_img/src/2.png'
+        });
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+        infowindow.setContent(locations[i][0]);
+        infowindow.open(map, marker);
+        }
+        })(marker, i));
+        }
+        }
+      </script>
+
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaXWsuBFVuwq6kzSAoicgSWCV8A4agZVA&callback=initMap">
+    </script>
+
+  	<script>
+    	$(document).ready(function() {
+        $('#map').click(function () {
+          $('#map div').css("pointer-events", "auto");
+        });
+
+        $( "#map" ).hover(function() {
+          $('#map div').css("pointer-events", "none");
+        });
+
+      });
+   	</script>
 
   </body>
 </html>
