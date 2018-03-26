@@ -12,6 +12,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
+    <!-- Menu -->
+    <link rel='stylesheet prefetch' href='http://daneden.github.io/animate.css/animate.min.css'>
+    <link rel="stylesheet" href="css/menu.css">
+
     <!-- Owl Carousel -->
     <link href="css/owl_slide.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -74,7 +78,43 @@
           <img src="img/menu/3.png" alt="" class="small_logo img-responsive">
         </div>
         <div class="col-lg-5 col-md-5 col-sm-5">
-          <a href="#" class="anim_btn effektD">Швидке замовлення</a>
+          <a href="#" data-toggle="modal" data-target="#modal1"
+           class="anim_btn effektD">Швидке замовлення</a>
+
+          <div class="button_container page_menu" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </div>
+
+          <div class="overlay" id="overlay">
+
+            <nav class="overlay-menu">
+              <ul>
+                <li>
+                  <a href="#about_us_section" id="link_1">
+                    Про нас
+                  </a>
+                </li>
+                <li>
+                  <a href="#work_scheme" id="link_2">
+                    Схема роботи
+                  </a>
+                </li>
+                <li>
+                  <a href="#product_section" id="link_3">
+                    Меню
+                  </a>
+                </li>
+                <li>
+                  <a href="#contacts_section" id="link_4">
+                    Контакти
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
 
         </div>
       </div>
@@ -95,10 +135,14 @@
                 Без черг! Без переплати. просто соковите, свіженьке м'яско у
                 фірмовому маринаді.
               </p>
-              <a href="#" class="anim_btn effektD">Хочу вже!</a>
+              <a href="#" data-toggle="modal" data-target="#modal1"
+               class="anim_btn effektD">Хочу вже!</a>
 
             </div>
           </div>
+
+          <a id="small_header_btn" href="#" data-toggle="modal" data-target="#modal1"
+           class="anim_btn effektD">Хочу вже!</a>
 
         </div>
 
@@ -339,7 +383,8 @@
                 </div>
               </div>
             </article>
-            <a href="#" class="anim_btn effektD">Замовити</a>
+            <a href="#" data-toggle="modal" data-target="#modal1"
+             class="anim_btn effektD">Замовити</a>
           </div>
 
           <div class="col-lg-6 product_block">
@@ -389,7 +434,8 @@
                 </div>
               </div>
             </article>
-            <a href="#" class="anim_btn effektD">Замовити</a>
+            <a href="#" data-toggle="modal" data-target="#modal1"
+             class="anim_btn effektD">Замовити</a>
           </div>
           <div class="col-lg-6 product_block">
             <img src="img/product_secction/src/4.jpg" class="img-responsive" alt="">
@@ -407,7 +453,8 @@
             <p>
               Акція діє до 18.05.2018
             </p>
-            <a href="#" id="bottom_btn" class="anim_btn effektD">Круто! Замовляю.</a>
+            <a href="#" data-toggle="modal" data-target="#modal1"
+             id="bottom_btn" class="anim_btn effektD">Круто! Замовляю.</a>
           </div>
         </div>
       </section>
@@ -489,7 +536,8 @@
           Сайт розроблено компанією
         </p>
         <a href="">
-          <img src="img/main_img/src/1.png" alt="" >
+          <img id="big_footer_logo" src="img/main_img/src/1.png" alt="" >
+          <img id="small_footer_logo" src="img/main_img/src/3.png" alt="" >
         </a>
       </article>
       <article class="copyright">
@@ -502,31 +550,70 @@
     <section id="modals-section">
 
       <div class="modal fade" id="modal1">
-        <div class="modal-dialog modal-md">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-body">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
-              <h3>
+              <header>
+                <h3>
+                  Самий крутий заголовок
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Mollitia autem adipisci tenetur ut quibusdam inventore minima
+                  sequi assumenda similique delectus dolores eaque maiores,
+                  cupiditate.
+                </p>
+              </header>
 
-              </h3>
+              <form>
+                <article class="product_amount">
+                  <h4>
+                    Курячий шашлик “Ніжність”
+                  </h4>
+                  <input type="number" name="quantity" min="1" max="30" id="number">
+                </article>
+
+                <article class="product_amount">
+                  <h4>
+                    Свиний шашлик “Чілі”
+                  </h4>
+                  <input type="number" name="quantity" min="1" max="30" id="number">
+                </article>
+
+                <article class="product_amount">
+                  <h4>
+                    Курячий шашлик “Ніжність”
+                  </h4>
+                  <input type="number" name="quantity" min="1" max="30" id="number">
+                </article>
+
+                <article class="product_amount">
+                  <h4>
+                    Свиний шашлик “Чілі”
+                  </h4>
+                  <input type="number" name="quantity" min="1" max="30" id="number">
+                </article>
+
+              </form>
 
               <form>
                 <h4>
 
                 </h4>
 
-                <input type="text" placeholder="ФИО*" name="name" pattern=".{5,}" title="Введите минимум 5 символов"  required>
-                <input type="text" name="tel" placeholder="Телефон*" pattern="\d*" title="Phone number should contain only digits." required >
-                <input type="text" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Enter correct email" required >
-                <input type="text" placeholder="Город" name="city" pattern=".{2,}" title="Введите минимум 2 символов"  required>
+                <input id="date" class="no-spin" type="date">
+                <input type="text" placeholder="ПІП*" name="name" pattern=".{5,}" title="Введіть мінімум 3 символа"  required>
+                <input type="text" name="tel" placeholder="Телефон*" pattern="\d*" title="Номер телефону повинен складатись лише з цифр" required >
+                <input type="text" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Введіть коректний email адрес" required >
 
                 <h4>
 
                 </h4>
 
-                <textarea cols="50" id="title" name="title" placeholder="Комментарий" rows="4"></textarea>
-                <input type="submit" value="Отправить">
+                <textarea cols="50" id="title" name="title" placeholder="Ваш коментар" rows="4"></textarea>
+                <input id="k" class="anim_btn effektD" type="submit" value="Надіслати">
               </form>
 
             </div>
@@ -539,6 +626,25 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+
+    <!--
+    <script>
+
+    // Select your input element.
+        var number = document.getElementById('number');
+
+        // Listen for input event on numInput.
+        number.onkeydown = function(e) {
+         if(!((e.keyCode > 95 && e.keyCode < 106)
+           || (e.keyCode > 47 && e.keyCode < 58)
+           || e.keyCode == 8 || e.keyCode == 0)) {
+             return false;
+         }
+        }
+
+    </script>
+    -->
 
     <!-- Scroll -->
     <script src="js/scroll.js"></script>
@@ -595,6 +701,10 @@
 
       });
    	</script>
+
+    <!-- Menu -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
+    <script src="js/menu.js"></script>
 
   </body>
 </html>
