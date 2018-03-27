@@ -507,6 +507,12 @@
     background-image: url(../img/header_section/src/4.jpg);
   }
 
+  @supports (-moz-appearance:none) {
+      #header_img_section {
+        background-position: top center;
+      }
+  }
+
   .about_us_article {
   	margin-bottom: 50px;
   	height: 140px;
@@ -773,6 +779,10 @@
     height: 400px;
   }
 
+  #contacts_img .img_section_content {
+    right: 30px;
+  }
+
   a.arrow_top {
     font-size: .9em;
   	padding-top: 6px;
@@ -963,6 +973,10 @@
 
   #modals-section input[type=text] {
     font-size: 1.7em;
+  }
+
+  .order_article span {
+    float: none;
   }
 
   /* End modal */
